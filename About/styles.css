@@ -17,8 +17,8 @@
 
 .about-photo {
   position: absolute;
-  top: 10vh;
-  right: 2vw; /* Top left as requested */
+  top: 9vh;
+  right: 1vw; 
   width: 400px;
   height: auto;
   border-radius: 8px;
