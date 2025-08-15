@@ -18,8 +18,8 @@
 .about-photo {
   position: absolute;
   top: 10vh;
-  left: 10vw; /* Top left as requested */
-  width: 200px;
+  right: 2vw; /* Top left as requested */
+  width: 400px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
@@ -82,4 +82,21 @@
 .section-button:hover {
   background: var(--color-accent);
   color: var(--color-bg);
+}
+
+.nav-back {
+  position: fixed;
+  left: calc(5vw - 2rem);
+  top: calc(5vh + 5rem); /* Positioned below Home */
+  color: var(--color-text);
+  font-size: 1rem;
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  z-index: 21;
+  transition: text-decoration 0.3s;
+}
+
+.nav-back:hover {
+  text-decoration: line-through;
 }

@@ -64,3 +64,20 @@
 .social-links a:hover {
   color: var(--color-accent);
 }
+
+.nav-back {
+  position: fixed;
+  left: calc(5vw - 2rem);
+  top: calc(5vh + 5rem); /* Positioned below Home */
+  color: var(--color-text);
+  font-size: 1rem;
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  z-index: 21;
+  transition: text-decoration 0.3s;
+}
+
+.nav-back:hover {
+  text-decoration: line-through;
+}

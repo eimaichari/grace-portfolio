@@ -121,3 +121,75 @@ window.addEventListener('DOMContentLoaded', () => {
   initConfettiOnFinal();
   observer.observe(document.getElementById('code'));
 });
+
+// New: Dynamic waller text on hover
+function initWallerHover() {
+  const wallerText = document.getElementById('waller-text');
+  const defaultText = wallerText.innerHTML;
+  const links = document.querySelectorAll('.waller-title-link');
+
+  links.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      if (link.classList.contains('work')) {
+        wallerText.innerHTML = '<h2>Work</h2><p>Explore my projects, designs, and creative experiments in web development.</p>';
+      } else if (link.classList.contains('about')) {
+        wallerText.innerHTML = '<h2>About</h2><p>Learn more about my journey, skills, and passion for crafting digital experiences.</p>';
+      } else if (link.classList.contains('contact')) {
+        wallerText.innerHTML = '<h2>Contact</h2><p>Get in touch for collaborations, questions, or freelance opportunities.</p>';
+      }
+      wallerText.style.opacity = 1;
+    });
+
+    link.addEventListener('mouseleave', () => {
+      wallerText.innerHTML = defaultText;
+      wallerText.style.opacity = 0; // Or keep it visible if preferred
+    });
+  });
+}
+
+// Updated initScrollShow to include home link click handling
+function initScrollShow() {
+  const navHome = document.getElementById('home-link');
+  if (navHome) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > window.innerHeight - 100) {
+        navHome.style.display = 'block';
+      } else {
+        navHome.style.display = 'none';
+      }
+    });
+
+    navHome.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+}
+
+// Handle back hash for no loader and scroll to waller
+function handleBackHash() {
+  if (location.hash === '#back') {
+    const loader = document.querySelector('.loader');
+    if (loader) {
+      loader.style.display = 'none';
+    }
+    const waller = document.getElementById('waller');
+    if (waller) {
+      waller.scrollIntoView({ behavior: 'smooth' });
+    }
+    // Clear hash to avoid issues
+    history.replaceState(null, null, ' ');
+  }
+}
+
+// Init on DOM load
+window.addEventListener('DOMContentLoaded', () => {
+  createStarField();
+  createShootingStars();
+  initCursorCircle();
+  initScrollShow();
+  initWallerHover();
+  initConfettiOnFinal();
+  observer.observe(document.getElementById('code'));
+  handleBackHash();
+});
