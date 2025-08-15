@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work - Grace Kuti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="./styles.css"> <!-- Add specific styles for about page -->
+</head>
+<body>
+  <!-- Fixed Vertical Line and Texts -->
+  <div class="vertical-line"></div>
+  <a href="../index.html" class="nav-home">Home</a>
+  <div class="footer-text">Designed by Grace Kuti</div>
+
+  <!-- Star Field for Cosmic Vista -->
+  <div id="star-field" class="full-page-star-field"></div>
+
+  <main>
+    <section class="work-hero">
+      <h1>My Work</h1>
+      <p>Selected projects and experiments.</p>
+    </section>
+
+    <section class="work-grid">
+      <!-- Project Card Example -->
+      <div class="project-card">
+        <img src="project1.jpg" alt="Project 1" class="project-image"> <!-- Add your images -->
+        <h3 class="project-title">Portfolio Site</h3>
+        <p class="project-desc">A personal portfolio with space theme.</p>
+        <div class="project-tags">
+          <span>HTML</span> <span>CSS</span> <span>JS</span>
+        </div>
+        <a href="#" class="project-link">View Project →</a>
+      </div>
+
+      <!-- Add more cards -->
+      <div class="project-card">
+        <img src="project2.jpg" alt="Project 2">
+        <h3 class="project-title">Client Website A</h3>
+        <p class="project-desc">Scalable frontend for e-commerce.</p>
+        <div class="project-tags">
+          <span>UI/UX</span> <span>React</span>
+        </div>
+        <a href="#" class="project-link">View Project →</a>
+      </div>
+      <!-- Repeat for more -->
+    </section>
+  </main>
+
+  <script src="../script.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      createStarField('star-field');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+.full-page-star-field {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.about-hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10vw;
+  position: relative;
+  z-index: 2;
+}
+
+.about-photo {
+  position: absolute;
+  top: 10vh;
+  left: 10vw; /* Top left as requested */
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.about-title {
+  font-family: var(--font-montserrat);
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: var(--color-accent);
+}
+
+.about-subtitle {
+  font-size: clamp(3rem, 8vw, 6rem);
+}
+
+.about-description {
+  font-size: 1.5rem;
+  max-width: 50rem; /* Extended width for longer paragraph */
+}
+
+.about-subpoints {
+  max-width: 40rem;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.about-sections {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+}
+
+.section-build, .section-write {
+  width: 50%;
+  padding: 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-build {
+  background: linear-gradient(to right, var(--color-bg), rgba(168, 85, 247, 0.1));
+}
+
+.section-write {
+  background: linear-gradient(to left, var(--color-bg), rgba(16, 185, 129, 0.1));
+}
+
+.section-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.section-button:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}

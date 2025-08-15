@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Grace Kuti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="./styles.css"> <!-- Add specific styles for about page -->
+</head>
+<body>
+  <!-- Fixed Vertical Line and Texts -->
+  <div class="vertical-line"></div>
+  <a href="../index.html" class="nav-home">Home</a>
+  <div class="footer-text">Designed by Grace Kuti</div>
+
+  <!-- Star Field for Cosmic Vista -->
+  <div id="star-field" class="full-page-star-field"></div>
+
+  <main>
+    <section class="contact-section">
+      <h1>Hello.</h1>
+      <p>Need a beautiful, well-structured website that you can own and maintain yourself? Get in touch.</p>
+      
+      <form class="contact-form" action="#" method="post"> <!-- Add action for backend -->
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
+      
+      <div class="contact-info">
+        <p>Email: gracekuti@example.com</p> <!-- Replace with your email -->
+        <ul class="social-links">
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">GitHub</a></li>
+          <!-- Add more -->
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="../script.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      createStarField('star-field');
+    });
+  </script>
+</body>
+</html>

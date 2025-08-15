@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Grace Kuti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="./styles.css"> <!-- Add specific styles for about page -->
+</head>
+<body>
+  <!-- Fixed Vertical Line and Texts -->
+  <div class="vertical-line"></div>
+  <a href="../index.html" class="nav-home">Home</a>
+  <div class="footer-text">Designed by Grace Kuti</div>
+
+  <!-- Star Field for Cosmic Vista -->
+  <div id="star-field" class="full-page-star-field"></div>
+
+  <main>
+    <!-- About Hero -->
+    <section class="about-hero">
+      <img src="grace-kuti.jpg" alt="Grace Kuti" class="about-photo"> <!-- Placeholder; replace with your image -->
+      <h1 class="about-title">Grace Kuti</h1>
+      <h2 class="about-subtitle">Web Designer & Developer.</h2>
+      <p class="about-description">
+        I like to craft solid and scalable frontend products with great user experiences. Highly skilled at progressive enhancement, design systems & UI Engineering. Proven experience building successful products for clients across several countries. As an aspiring web designer, I'm passionate about blending creativity with functionality, experimenting with new technologies, and pushing the boundaries of what's possible in digital spaces. My journey started with simple code experiments, and now I'm dedicated to creating sleek, intuitive websites that not only look great but also perform flawlessly across devices.
+      </p>
+      <div class="about-subpoints">
+        <p>Highly skilled at progressive enhancement, design systems & UI Engineering.</p>
+        <p>Proven experience building successful products for clients across several countries.</p>
+      </div>
+    </section>
+
+    <!-- Scroll Sections -->
+    <section class="about-sections">
+      <div class="section-build">
+        <h3>I build & design stuff</h3>
+        <p>Open source projects, web apps and experimentals.</p>
+        <a href="../Work/index.html" class="section-button">See my work →</a>
+      </div>
+      <div class="section-write">
+        <h3>I write, sometimes</h3>
+        <p>About design, frontend dev, learning and life.</p>
+        <a href="#" class="section-button">Read my articles →</a> <!-- Add link if you have a blog -->
+      </div>
+    </section>
+  </main>
+
+  <script src="../script.js"></script>
+  <script>
+    // Init star field for about page
+    window.addEventListener('DOMContentLoaded', () => {
+      createStarField('star-field');
+    });
+  </script>
+</body>
+</html>
