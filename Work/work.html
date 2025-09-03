@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Work - Grace Kuti</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="./styles.css"> <!-- Add specific styles for about page -->
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <!-- Fixed Vertical Line and Texts -->
@@ -24,73 +23,62 @@
       <p>Selected projects and experiments.</p>
     </section>
 
-    <section class="work-grid">
-      <!-- Project Card Example -->
-      <div class="project-card">
-        <img src="project1.jpg" alt="Project 1" class="project-image"> <!-- Add your images -->
-        <h3 class="project-title">Portfolio Site</h3>
-        <p class="project-desc">A personal portfolio with space theme.</p>
-        <div class="project-tags">
-          <span>HTML</span> <span>CSS</span> <span>JS</span>
-        </div>
-        <a href="#" class="project-link">View Project →</a>
-      </div>
+    <div class="work-container">
+      <div class="preview-area" id="preview-area"></div>
+      <ul class="project-list" id="project-list">
+        <li data-project="portfolio-site">
+          Portfolio Site
+          <span>Web Development</span>
+        </li>
+        <li data-project="client-website-a">
+          Client Website A
+          <span>UI/UX, React</span>
+        </li>
+        <li data-project="romantic-project">
+          Romantic project
+          <span>Web Development</span>
+        </li>
+        <li data-project="church-website">
+          Church website
+          <span>Web Development</span>
+        </li>
+        <li data-project="water-status-project">
+          Water status project
+          <span>Web Development, Python</span>
+        </li>
+        <li data-project="gatsby-ecommerce">
+          Gatsby ecommerce
+          <span>Web Development</span>
+        </li>
+      </ul>
+    </div>
 
-      <!-- Add more cards -->
-      <div class="project-card">
-        <img src="project2.jpg" alt="Project 2">
-        <h3 class="project-title">Client Website A</h3>
-        <p class="project-desc">Scalable frontend for e-commerce.</p>
-        <div class="project-tags">
-          <span>UI/UX</span> <span>React</span>
-        </div>
-        <a href="#" class="project-link">View Project →</a>
+    <section class="project-detail" id="project-detail" style="display: none;">
+      <div id="detail-cover-image"></div>
+      <h1 id="detail-title"></h1>
+      <div class="metadata">
+        <p><strong>Category:</strong></p>
+        <p><span id="detail-categories"></span></p>
+        <p><strong>Year:</strong></p>
+        <p><span id="detail-year"></span></p>
+        <p><strong>Awards:</strong></p>
+        <p><span id="detail-awards"></span></p>
       </div>
-      <!-- Repeat for more -->
-       <div class="project-card">
-        <img src="project2.jpg" alt="Project 3">
-        <h3 class="project-title">Romantic project</h3>
-        <p class="project-desc">Simple birthday website.</p>
-        <div class="project-tags">
-          <span>HTML</span> <span>CSS</span> <span>JS</span>
-        </div>
-        <a href="#" class="project-link">View Project →</a>
+      <div class="description-container">
+        <p id="detail-desc"></p>
       </div>
-      <div class="project-card">
-        <img src="project2.jpg" alt="Project 4">
-        <h3 class="project-title">Church website</h3>
-        <p class="project-desc">Website Developped for the church of Terre Sacre.</p>
-        <div class="project-tags">
-          <span>HTML</span> <span>CSS</span> <span>JS</span>
-        </div>
-        <a href="#" class="project-link">View Project →</a>
-      </div>
-      <div class="project-card">
-        <img src="project2.jpg" alt="Project 5">
-        <h3 class="project-title">Water status project</h3>
-        <p class="project-desc">Project to receive alerts on water outages.</p>
-        <div class="project-tags">
-          <span>HTML</span> <span>CSS</span> <span>JS</span> <span>PY</span>
-        </div>
-        <a href="#" class="project-link">View Project →</a>
-      </div>
-      <div class="project-card">
-        <img src="project2.jpg" alt="Project 6">
-        <h3 class="project-title">Gatsby ecommerce</h3>
-        <p class="project-desc">ecommerce project.</p>
-        <div class="project-tags">
-          <span>CSS</span> <span>JSON</span> <span>JS</span>
-        </div>
-        <a href="#" class="project-link">View Project →</a>
+      <h2 class="gallery-title">Gallery</h2>
+      <div class="gallery" id="detail-gallery"></div>
+      <div class="project-nav">
+        <button id="back-btn">← Back</button>
+        <button id="next-btn"></button>
       </div>
     </section>
   </main>
 
+  <!-- Load work.js specifically for this page -->
+  <script src="./work.js"></script>
+  <!-- Optionally load script.js if it contains shared utilities, but handle errors -->
   <script src="../script.js"></script>
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      createStarField('star-field');
-    });
-  </script>
 </body>
 </html>

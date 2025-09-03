@@ -23,19 +23,18 @@ function createShootingStars() {
     const shootingStar = document.createElement('div');
     shootingStar.className = 'shooting-star';
     const startX = Math.random() * window.innerWidth;
-    const startY = Math.random() * (window.innerHeight / 4); // Start from top
+    const startY = Math.random() * (window.innerHeight / 4);
     shootingStar.style.left = `${startX}px`;
     shootingStar.style.top = `${startY}px`;
     starField.appendChild(shootingStar);
 
-    // Animate
     setTimeout(() => {
       shootingStar.style.transform = `translate(${200 + Math.random() * 300}px, ${200 + Math.random() * 300}px)`;
       shootingStar.style.opacity = 1;
     }, 10);
 
     setTimeout(() => shootingStar.remove(), 1000);
-  }, 3000); // Every 3 seconds
+  }, 3000);
 }
 
 // Typed.js animation for code section
@@ -76,14 +75,13 @@ function initCursorCircle() {
     cursorCircle.style.top = `${e.clientY}px`;
   });
 
-  // Enlarge on hover links
   document.querySelectorAll('a').forEach(link => {
     link.addEventListener('mouseenter', () => cursorCircle.classList.add('enlarge'));
     link.addEventListener('mouseleave', () => cursorCircle.classList.remove('enlarge'));
   });
 }
 
-// Show Home link after scrolling past hero (only on home)
+// Show Home link after scrolling past hero
 function initScrollShow() {
   const navHome = document.querySelector('.nav-home');
   if (navHome) {
@@ -97,7 +95,7 @@ function initScrollShow() {
   }
 }
 
-// Trigger confetti when final timeline item is visible (if you add timeline later)
+// Trigger confetti when final timeline item is visible (placeholder)
 function initConfettiOnFinal() {
   // Placeholder - add if needed
 }
@@ -107,89 +105,63 @@ const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       initTyped();
-      observer.unobserve(entry.target); // Run once
+      observer.unobserve(entry.target);
     }
   });
 }, { threshold: 0.4 });
 
-// Init on DOM load
-window.addEventListener('DOMContentLoaded', () => {
-  createStarField();
-  createShootingStars();
-  initCursorCircle();
-  initScrollShow();
-  initConfettiOnFinal();
-  observer.observe(document.getElementById('code'));
-});
-
-// New: Dynamic waller text on hover
+// Dynamic waller text on hover
 function initWallerHover() {
   const wallerText = document.getElementById('waller-text');
-  const defaultText = wallerText.innerHTML;
+  const defaultText = wallerText ? wallerText.innerHTML : '';
   const links = document.querySelectorAll('.waller-title-link');
 
   links.forEach(link => {
     link.addEventListener('mouseenter', () => {
-      if (link.classList.contains('work')) {
-        wallerText.innerHTML = '<h2>Work</h2><p>Explore my projects, designs, and creative experiments in web development.</p>';
-      } else if (link.classList.contains('about')) {
-        wallerText.innerHTML = '<h2>About</h2><p>Learn more about my journey, skills, and passion for crafting digital experiences.</p>';
-      } else if (link.classList.contains('contact')) {
-        wallerText.innerHTML = '<h2>Contact</h2><p>Get in touch for collaborations, questions, or freelance opportunities.</p>';
+      if (wallerText) {
+        if (link.classList.contains('work')) {
+          wallerText.innerHTML = '<h2>Work</h2><p>Explore my projects, designs, and creative experiments in web development.</p>';
+        } else if (link.classList.contains('about')) {
+          wallerText.innerHTML = '<h2>About</h2><p>Learn more about my journey, skills, and passion for crafting digital experiences.</p>';
+        } else if (link.classList.contains('contact')) {
+          wallerText.innerHTML = '<h2>Contact</h2><p>Get in touch for collaborations, questions, or freelance opportunities.</p>';
+        }
+        wallerText.style.opacity = 1;
       }
-      wallerText.style.opacity = 1;
     });
 
     link.addEventListener('mouseleave', () => {
-      wallerText.innerHTML = defaultText;
-      wallerText.style.opacity = 0; // Or keep it visible if preferred
-    });
-  });
-}
-
-// Updated initScrollShow to include home link click handling
-function initScrollShow() {
-  const navHome = document.getElementById('home-link');
-  if (navHome) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > window.innerHeight - 100) {
-        navHome.style.display = 'block';
-      } else {
-        navHome.style.display = 'none';
+      if (wallerText) {
+        wallerText.innerHTML = defaultText;
+        wallerText.style.opacity = 0;
       }
     });
-
-    navHome.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
+  });
 }
 
 // Handle back hash for no loader and scroll to waller
 function handleBackHash() {
   if (location.hash === '#back') {
     const loader = document.querySelector('.loader');
-    if (loader) {
-      loader.style.display = 'none';
-    }
+    if (loader) loader.style.display = 'none';
     const waller = document.getElementById('waller');
-    if (waller) {
-      waller.scrollIntoView({ behavior: 'smooth' });
-    }
-    // Clear hash to avoid issues
+    if (waller) waller.scrollIntoView({ behavior: 'smooth' });
     history.replaceState(null, null, ' ');
   }
 }
 
-// Init on DOM load
+// Init on DOM load - only for homepage
 window.addEventListener('DOMContentLoaded', () => {
-  createStarField();
-  createShootingStars();
-  initCursorCircle();
-  initScrollShow();
-  initWallerHover();
-  initConfettiOnFinal();
-  observer.observe(document.getElementById('code'));
-  handleBackHash();
+  // Check if this is the homepage (e.g., index.html)
+  if (document.body.contains(document.getElementById('waller'))) {
+    createStarField();
+    createShootingStars();
+    initCursorCircle();
+    initScrollShow();
+    initWallerHover();
+    initConfettiOnFinal();
+    const codeElement = document.getElementById('code');
+    if (codeElement) observer.observe(codeElement);
+    handleBackHash();
+  }
 });
