@@ -68,7 +68,7 @@ window.addEventListener('DOMContentLoaded', () => {
       year: 2024,
       awards: 'None',
       desc: 'Simple birthday website. A heartfelt project with custom animations and personal touches to celebrate special occasions.',
-      media: ['/images/logistel1.png', '/images/logistel2.png', '/images/logistel3.png', '/images/logistel4.png', '/images/logistel5.png', '/images/logistel6.png', '/images/logistelSign1.png', '/images/logistelSign2.png'],
+      media: ['/images/logistel1.png', '/images/logistel3.png', '/images/logistel4.png', '/images/logistel5.png', '/images/logistel6.png', '/images/logistelSign1.png', '/images/logistelSign2.png'],
       cover: '/images/logistel1.png'
     },
     'church-website': {
