@@ -61,3 +61,81 @@
 .blog-link:hover {
   border-color: var(--color-accent);
 }
+
+/* Mobile navigation */
+.mobile-nav {
+  display: none;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  /* Hide vertical navigation (assumed to be included from another file) */
+  .nav-back {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background-color: var(--color-bg);
+    z-index: 100;
+  }
+
+  .mobile-nav a {
+    color: var(--color-text);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .mobile-nav a:hover {
+    color: var(--color-accent);
+  }
+
+  /* Blog Hero */
+  .blog-hero {
+    padding: 2rem 1rem;
+  }
+
+  .blog-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .blog-subtitle {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    max-width: 95%;
+  }
+
+  /* Blog List */
+  .blog-list {
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .blog-card {
+    padding: 1rem;
+  }
+
+  .blog-card h2 {
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+  }
+
+  .blog-card p {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+  }
+
+  .blog-link {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+  }
+}
+
+/* Disable animations for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0ms !important; transition-duration: 0ms !important; }
+}

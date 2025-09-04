@@ -81,3 +81,86 @@
 .nav-back:hover {
   text-decoration: line-through;
 }
+
+/* Mobile navigation */
+.mobile-nav {
+  display: none;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  /* Hide vertical navigation */
+  .nav-back {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background-color: var(--color-bg);
+    z-index: 100;
+  }
+
+  .mobile-nav a {
+    color: var(--color-text);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .mobile-nav a:hover {
+    color: var(--color-accent);
+  }
+
+  /* Contact Section */
+  .contact-section {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .contact-section h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .contact {
+    max-width: 95%;
+  }
+
+  .contact label {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+  }
+
+  .contact input, .contact textarea {
+    padding: 0.5rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+  }
+
+  .contact button {
+    padding: 0.8rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+  }
+
+  .contact-info {
+    margin-top: 1.5rem;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .social-links a {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+  }
+}
+
+/* Disable animations for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0ms !important; transition-duration: 0ms !important; }
+}

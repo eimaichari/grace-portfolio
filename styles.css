@@ -291,6 +291,109 @@ body {
   border-color: var(--color-string);
 }
 
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  /* Replace vertical line with mobile navigation */
+  .vertical-line,
+  .nav-home,
+  .footer-text {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background-color: var(--color-bg);
+    z-index: 100;
+  }
+
+  .mobile-nav a {
+    color: var(--color-text);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .mobile-nav a:hover {
+    color: var(--color-accent);
+  }
+
+  /* Hero section adjustments */
+  #hero {
+    padding: 1rem;
+  }
+
+  .code-title {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+  }
+
+  .hero-text {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    max-width: 95%;
+  }
+
+  /* Hide scroll indicator on mobile */
+  .scroll-indicator {
+    display: none;
+  }
+
+  /* Code section */
+  #code {
+    padding: 1rem;
+  }
+
+  .code-output {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    max-width: 95%;
+  }
+
+  /* Waller section */
+  #waller {
+    flex-direction: column;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .waller-overlay {
+    width: 100%;
+    padding-left: 0;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .waller-title-link {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    text-align: center;
+    z-index: 2; /* Ensure links are above text */
+  }
+
+  .waller-text {
+    position: static;
+    transform: none;
+    max-width: 90%;
+    opacity: 0;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    z-index: 1; /* Below links */
+  }
+
+  .waller-title-link.active ~ .waller-text {
+    opacity: 1; /* Show only when link is active */
+  }
+
+  /* Hide cursor circle on touch devices */
+  .cursor-circle {
+    display: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0ms !important; transition-duration: 0ms !important; }
 }

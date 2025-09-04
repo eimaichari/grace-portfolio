@@ -24,21 +24,29 @@
       <h1>Hello.</h1>
       <p>Need a beautiful, well-structured website that you can own and maintain yourself? Get in touch.</p>
       
-      <form class="contact" method="post" data-netlify="true"> 
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
-        
-        <button type="submit">Send Message</button>
+      <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/success">
+        <!-- Hidden honeypot field for spam protection -->
+        <p class="hidden" style="display: none;">
+          <label>Don’t fill this out: <input name="bot-field"></label>
+        </p>
+        <!-- Hidden input for form name -->
+        <input type="hidden" name="form-name" value="contact">
+        <div class="contact">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+          
+          <button type="submit">Send Message</button>
+        </div>
       </form>
       
       <div class="contact-info">
-        <p>Email: kutigrace9@gmail.com</p> 
+        <p>Email: kutigrace9@gmail.com</p>
         <ul class="social-links">
           <li><a href="https://www.linkedin.com/in/grace-kuti-881a7125a/">LinkedIn</a></li>
           <li><a href="https://dev.to/grace_kuti_e6a0d8b96b7a0f/">Dev.to</a></li>
