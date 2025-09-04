@@ -50,26 +50,26 @@ window.addEventListener('DOMContentLoaded', () => {
       year: 2023,
       awards: 'None',
       desc: 'A personal portfolio with space theme. This project showcases my skills in creating immersive, themed websites with dynamic elements like star fields.',
-      media: ['https://placehold.co/1200x800/292b3c/fff?text=Gallery+Image+1', 'https://placehold.co/1200x900/4a4e69/fff?text=Gallery+Image+2', 'https://placehold.co/1200x700/6b705c/fff?text=Gallery+Image+3'],
-      cover: 'https://placehold.co/1200x600/1e293b/a855f7?text=Portfolio+Cover'
+      media: ['/images/loadingScreen.png', '/images/HomePage.png', '/images/digitalText.png', '/images/lastPage.png'],
+      cover: '/images/My portfolio cover.jpg'
     },
     'client-website-a': {
-      title: 'Client Website A',
+      title: 'Mubs Amneties',
       categories: ['UI/UX', 'React'],
       year: 2023,
       awards: 'None',
       desc: 'Scalable frontend for e-commerce. Built with modern frameworks to ensure responsiveness and user-friendly navigation.',
-      media: ['https://placehold.co/1200x800/1e3b2b/fff?text=Gallery+Image+A', 'https://placehold.co/1200x900/4e694a/fff?text=Gallery+Image+B', 'https://placehold.co/1200x700/705c6b/fff?text=Gallery+Image+C'],
-      cover: 'https://placehold.co/1200x600/4a4e69/fff?text=Client+Website+Cover'
+      media: ['/images/mubsHome.png', '/images/mubsScrollDown.png', '/images/mubsFooter.png', '/images/mubsAboutPage.png', '/images/mubsScrollAbout.png', '/images/mubsBottomAbout.png', '/images/mubsProduct.png'],
+      cover: '/images/mubsHome.png'
     },
     'romantic-project': {
-      title: 'Romantic project',
+      title: 'Logistel DRC',
       categories: ['HTML', 'CSS', 'JS'],
       year: 2024,
       awards: 'None',
       desc: 'Simple birthday website. A heartfelt project with custom animations and personal touches to celebrate special occasions.',
-      media: ['https://placehold.co/1200x800/8d2b96/fff?text=Romantic+Site+Shot', 'https://placehold.co/1200x900/a35fbc/fff?text=Love+Project+2', 'https://placehold.co/1200x700/b06fca/fff?text=Main+Layout'],
-      cover: 'https://placehold.co/1200x600/8d2b96/fff?text=Romantic+Project+Cover'
+      media: ['/images/logistel1.png', '/images/logistel2.png', '/images/logistel3.png', '/images/logistel4.png', '/images/logistel5.png', '/images/logistel6.png', '/images/logistelSign1.png', '/images/logistelSign2.png'],
+      cover: '/images/logistel1.png'
     },
     'church-website': {
       title: 'Church website',
@@ -77,26 +77,26 @@ window.addEventListener('DOMContentLoaded', () => {
       year: 2024,
       awards: 'None',
       desc: 'Website Developed for the church of Terre Sacre. Features event calendars, donation integrations, and a serene design to foster community engagement.',
-      media: ['https://placehold.co/1200x800/3d517e/fff?text=Church+Homepage', 'https://placehold.co/1200x900/4e628a/fff?text=Events+Page', 'https://placehold.co/1200x700/5d739b/fff?text=Donation+Form'],
-      cover: 'https://placehold.co/1200x600/3d517e/fff?text=Church+Website+Cover'
+      media: ['/images/terreHome.png', '/images/terreHscroll1.png', '/images/terreHscroll2.png', '/images/terreHscroll3.png', '/images/terreHscroll4.png', '/images/terreAbout1.png', '/images/terreAbout2.png', '/images/terreAbout3.png', '/images/terreSched1.png', '/images/terreSched2.png', '/images/terreSched3.png', '/images/terreWatch1.png', '/images/terreWatch2.png', '/images/terreWatch3.png', '/images/terreVisit4.png', '/images/terreVisit1.png', '/images/terreVisit2.png', '/images/terreVisit3.png'],
+      cover: '/images/terreHome.png'
     },
     'water-status-project': {
-      title: 'Water status project',
+      title: 'UnisonCo',
       categories: ['HTML', 'CSS', 'JS', 'PY'],
       year: 2024,
       awards: 'None',
       desc: 'Project to receive alerts on water outages. Combines frontend interfaces with backend scripting for real-time notifications.',
-      media: ['https://placehold.co/1200x800/1e88e5/fff?text=Water+Status+Dashboard', 'https://placehold.co/1200x900/29b6f6/fff?text=Alert+Interface', 'https://placehold.co/1200x700/4fc3f7/fff?text=Python+Integration'],
-      cover: 'https://placehold.co/1200x600/1e88e5/fff?text=Water+Status+Cover'
+      media: ['/images/Unison1.png', '/images/Unison2.png', '/images/Unison3.png', '/images/Unison4.png', '/images/Unison5.png', '/images/Unison6.png', '/images/Unison7.png', '/images/Unison8.png'],
+      cover: '/images/unisonCover.png'
     },
     'gatsby-ecommerce': {
-      title: 'Gatsby ecommerce',
+      title: 'NMG Zembeta',
       categories: ['CSS', 'JSON', 'JS'],
       year: 2024,
       awards: 'None',
       desc: 'Ecommerce project. Static site generation with Gatsby for fast performance, integrated with JSON data for product management.',
-      media: ['https://placehold.co/1200x800/4CAF50/fff?text=Gatsby+Storefront', 'https://placehold.co/1200x900/81C784/fff?text=Product+Page', 'https://placehold.co/1200x700/A5D6A7/fff?text=Checkout+Flow'],
-      cover: 'https://placehold.co/1200x600/4CAF50/fff?text=Ecommerce+Cover'
+      media: ['/images/nmgHome1.png', '/images/nmgHome2.png', '/images/nmgHome3.png', '/images/nmgAbout1.png', '/images/nmgAbout2.png', '/images/nmgAbout3.png', '/images/nmgProduct1.png', '/images/nmgProduct2.png', '/images/nmgContact.png'],
+      cover: '/images/nmgHome1.png'
     }
   };
 

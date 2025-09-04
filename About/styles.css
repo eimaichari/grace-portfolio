@@ -17,11 +17,11 @@
 
 .about-photo {
   position: absolute;
-  top: 9vh;
-  right: 1vw; 
+  top: -6vh;
+  right: -1vw; 
   width: 400px;
   height: auto;
-  border-radius: 8px;
+  border-radius: 20px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
