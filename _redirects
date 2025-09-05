@@ -1,3 +1,7 @@
+<xaiArtifact artifact_id="487629f2-cab2-42c1-878f-01ad0789f326" artifact_version_id="809f2ba5-b905-41bc-ac5c-3efe088cd509" title="_redirects" contentType="text/plain">
+
+```
 /* /index.html 200
-/contact /index.html 200
-/* /success.html 200
+/contact /Contact/index.html 200
+/success /success.html 200
+```
