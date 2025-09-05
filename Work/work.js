@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
     },
     'client-website-a': {
       title: 'Mubs Amneties',
-      categories: ['UI/UX', 'React'],
+      categories: ['HTML', 'CSS', 'JS'],
       year: 2025,
       awards: 'In collaboration with @JeremiahKazadi',
       desc: 'Built a scalable e-commerce frontend with modern frameworks to deliver a seamless shopping experience. Optimized for responsiveness and intuitive navigation, enabling customers to browse and purchase with ease. Collaborated with developer @JeremiahKazadi to ensure smooth integration and deployment, making the platform future-proof for growth.',
@@ -61,7 +61,7 @@ window.addEventListener('DOMContentLoaded', () => {
     },
     'romantic-project': {
       title: 'Logistel DRC',
-      categories: ['HTML', 'CSS', 'JS'],
+      categories: ['React', 'CSS', 'JSON', 'JS'],
       year: 2025,
       awards: 'In collaboration with @Yekhutiel',
       desc: 'Developed a collaborative web platform for Logistel DRC, a logistics company in the DRC. Focused on a clean and professional design that showcases services, builds trust, and simplifies navigation. Integrated e-commerce features to support appliance sales online. Worked alongside @Yekhutiel to deliver a solution that supports the company’s digital transformation and client outreach.',
@@ -81,7 +81,7 @@ window.addEventListener('DOMContentLoaded', () => {
     },
     'water-status-project': {
       title: 'UnisonCo',
-      categories: ['HTML', 'CSS', 'JS', 'PY'],
+      categories: ['HTML', 'CSS', 'JS'],
       year: 2023,
       awards: 'In collaboration with @JeremiahKazadi',
       desc: 'Developed a modern shoe e-commerce platform with an emphasis on speed, usability, and attractive product showcases. The site offers smooth navigation and a streamlined checkout process to enhance customer satisfaction. Built in collaboration with @Yekhutiel and @JeremiahKazadi, ensuring both technical robustness and strong visual branding.',
@@ -91,7 +91,7 @@ window.addEventListener('DOMContentLoaded', () => {
     },
     'gatsby-ecommerce': {
       title: 'NMG Zembeta',
-      categories: ['CSS', 'JSON', 'JS'],
+      categories: ['React', 'CSS', 'JSON', 'JS'],
       year: 2025,
       awards: 'In collaboration with @Yekhutiel and @JeremiahKazadi',
       desc: 'Designed and developed an e-commerce platform for NMG Zembeta, an appliance company seeking a modern and trustworthy online presence. The site highlights product collections, company values, and customer support channels in a clean, responsive interface. Built using React and Firebase for performance and scalability. Collaborated with @Yekhutiel and @JeremiahKazadi to deliver a polished product aligned with client expectations.',
