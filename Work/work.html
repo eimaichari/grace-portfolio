@@ -27,49 +27,32 @@
     <div class="work-container">
       <div class="preview-area" id="preview-area"></div>
       <ul class="project-list" id="project-list">
-        <li data-project="portfolio-site">
-          Portfolio Site
-          <span>Web Development</span>
-        </li>
-        <li data-project="client-website-a">
-          Mubs Amneties
-          <span>UI/UX, React</span>
-        </li>
-        <li data-project="romantic-project">
-          Logistel DRC
-          <span>Web Development</span>
-        </li>
-        <li data-project="church-website">
-          Terre Sacree Church
-          <span>Web Development</span>
-        </li>
-        <li data-project="water-status-project">
-          Unison Co
-          <span>Web Development, Python</span>
-        </li>
-        <li data-project="gatsby-ecommerce">
-          NMG Zembeta
-          <span>Web Development</span>
-        </li>
+        <li data-project="portfolio-site"> Portfolio Site <span>Web Development</span> </li>
+        <li data-project="client-website-a"> Mubs Amneties <span>UI/UX, React</span> </li>
+        <li data-project="romantic-project"> Logistel DRC <span>Web Development</span> </li>
+        <li data-project="church-website"> Terre Sacree Church <span>Web Development</span> </li>
+        <li data-project="water-status-project"> Unison Co <span>Web Development, Python</span> </li>
+        <li data-project="gatsby-ecommerce"> NMG Zembeta <span>Web Development</span> </li>
       </ul>
     </div>
 
-    <section class="project-detail" id="project-detail" style="display: none;">
-      <div id="detail-cover-image"></div>
-      <h1 id="detail-title"></h1>
-      <div class="metadata">
-        <p><strong>Category:</strong></p>
-        <p><span id="detail-categories"></span></p>
-        <p><strong>Year:</strong></p>
-        <p><span id="detail-year"></span></p>
-        <p><strong>Awards:</strong></p>
-        <p><span id="detail-awards"></span></p>
+    <section class="project-detail" id="project-detail">
+      <div id="detail-content-wrapper">
+        <div id="detail-cover-image"></div>
+        <h1 id="detail-title"></h1>
+        <div class="metadata">
+          <p><strong>Category:</strong></p> <p><span id="detail-categories"></span></p>
+          <p><strong>Year:</strong></p> <p><span id="detail-year"></span></p>
+          <p><strong>Collabs:</strong></p> <p><span id="detail-awards"></span></p>
+        </div>
+        <div class="description-container">
+          <p id="detail-desc"></p>
+          <a id="detail-link" href="#" target="_blank" rel="noopener noreferrer">Visit Site →</a> <!-- Moved inside -->
+        </div>
+        <h2 class="gallery-title">Gallery</h2>
+        <div class="gallery" id="detail-gallery"></div>
       </div>
-      <div class="description-container">
-        <p id="detail-desc"></p>
-      </div>
-      <h2 class="gallery-title">Gallery</h2>
-      <div class="gallery" id="detail-gallery"></div>
+
       <div class="project-nav">
         <button id="back-btn">← Back</button>
         <button id="next-btn"></button>
